@@ -144,7 +144,7 @@ Sample
 Enable git hooks support
 ```bash
 $ pwd
-/c/d/source/NBI_INVENTORY/.git/hooks
+/c/d/source/xxxx/.git/hooks
 $ ll
 total 40
 -rwxr-xr-x 1 relin 1049089  478 11月  5  2019 applypatch-msg.sample
@@ -167,11 +167,11 @@ The following example uses `pylint` to check python code issues.
 ```bash
 #!/bin/sh
 
-BASE_PATH=inventory/implementation/installation/inventory-rpm/src/install/
+BASE_PATH=/xxx/src/install/bin
 BASE_SCORE=10
 
 echo 'Start to check python issues...'
-pylint --rcfile=${BASE_PATH}inventory.py3.rcfile -j 4  ${BASE_PATH}*.py | sed '/^$/d' > pylint_check_result
+pylint --rcfile=${BASE_PATH}xxxxx.py3.rcfile -j 4  ${BASE_PATH}*.py | sed '/^$/d' > pylint_check_result
 
 score_line=$(grep 'Your code has been rated at' pylint_check_result)
 score=$(echo ${score_line} | awk -F/ '{print $1}' | awk '{print $NF}')
@@ -219,10 +219,10 @@ from fabric.context_managers import settings, hide
 from fabric.operations import run
 from fabric.state import env
 
-env.hosts = ['clab636node12']
+env.hosts = ['192.168.10.123']
 env.port = 22
 env.user = 'root'
-env.password = 'arthur'
+env.password = 'xxxx'
 
 
 def hostname():
