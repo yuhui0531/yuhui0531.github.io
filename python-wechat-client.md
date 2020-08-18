@@ -26,7 +26,7 @@ fm = logging.Formatter("%(asctime)s --- %(message)s")  # 设置日志格式
 logger.addHandler(fh)  # 把文件流添加进来，流向写入到文件
 fh.setFormatter(fm)  # 把文件流添加写入格式
 
-top_name_list = ['都市夜归人', '乖乖', '范媛凤', '任超全', '郑清文', '3-1-2502春蕾', '松梅', '赵baimei(Lucy)']
+top_name_list = ['xxx', 'yyy', 'zzzz']
 
 HEADER_COUNT = 4
 REMARK_NAME_PREFIX = 'RemarkName'
